@@ -3,28 +3,27 @@ import './App.css';
 
 function App() {
   const [count, setCount] = useState(0);
+  const MAX_COUNT = 20;
+  const MIN_COUNT = 0;
 
   const handleAdd = () => {
-    if(count>=20){
-      alert("cannot add more than 20");
+    if (count >= MAX_COUNT) {
+      alert("Cannot add more than 20");
+      return;
     }
-    else{
-      setCount(count + 1);
-    }
+    setCount(count + 1);
   };
 
   const handleRemove = () => {
-    if(count<=0){
-    alert("Count cannot be negative")
+    if (count <= MIN_COUNT) {
+      alert("Count cannot be negative");
+      return;
     }
-    else
-    {
-    setCount(count - 1);}
-
+    setCount(count - 1);
   };
 
   return (
-    <>
+    <div className="app">
       <h1>{count}</h1>
       <div className="card">
         <button id="add" onClick={handleAdd}>
@@ -34,11 +33,8 @@ function App() {
           Remove
         </button>
       </div>
-    </>
+    </div>
   );
 }
 
-
-
-
-export { App };
+export default App;
