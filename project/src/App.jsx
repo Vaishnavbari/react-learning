@@ -1,44 +1,44 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import { useState } from 'react';
+import './App.css';
 
 function App() {
-  const [count, setCount] = useState(0)
+  const [count, setCount] = useState(0);
+
+  const handleAdd = () => {
+    if(count>=20){
+      alert("cannot add more than 20");
+    }
+    else{
+      setCount(count + 1);
+    }
+  };
+
+  const handleRemove = () => {
+    if(count<=0){
+    alert("Count cannot be negative")
+    }
+    else
+    {
+    setCount(count - 1);}
+
+  };
 
   return (
     <>
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
+      <h1>{count}</h1>
       <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
+        <button id="add" onClick={handleAdd}>
+          Add
         </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
+        <button id="remove" onClick={handleRemove}>
+          Remove
+        </button>
       </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
     </>
-  )
+  );
 }
 
-function App2(){
-  return(
-    <div>
-      <h1>Hello World</h1>
-      
-    </div>
-  )
-}
 
-export { App, App2 };
+
+
+export { App };
