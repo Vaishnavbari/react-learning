@@ -23,7 +23,7 @@ function App() {
   };
 
   return (
-    <div className="app">
+    <div className="app bg-black">
       <h1>{count}</h1>
       <div className="card">
         <button id="add" onClick={handleAdd}>

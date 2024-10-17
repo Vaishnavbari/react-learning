@@ -16,11 +16,10 @@ function App({username}) {
           <button onClick={() => setColor("black")} className='text-white bg-gray-700 rounded-xl w-60 h-20 m-2'>Black</button>
           <button onClick={() => setColor("yellow")} className='text-black bg-yellow-700 rounded-xl w-60 h-20 m-2'>Yellow</button>
       </div>
-
       <div className='border border-black flex flex-nowrap'>
           <button onClick={() => setColor("orange")} className='text-black bg-orange-700 rounded-xl w-60 h-20 m-2'> Orange</button>
-          <button onClick={() => setColor("#FF7F50")} className='text-white bg-red-700 rounded-xl w-60 h-20 m-2'>Coral</button>
-          <button onClick={() => setColor("#DE3163")} className='text-white bg-pink-700 rounded-xl w-60 h-20 m-2'>Pink</button>
+          <button onClick={() => setColor("red")} className='text-white bg-red-700 rounded-xl w-60 h-20 m-2'>Red</button>
+          <button onClick={() => setColor("pink")} className='text-white bg-pink-700 rounded-xl w-60 h-20 m-2'>Pink</button>
           <button onClick={() => setColor("#9FE2BF")} className='text-black bg-teal-700 rounded-xl w-60 h-20 m-2'> Pale Green</button>
           <button onClick={() => setColor("#6495ED")} className='text-white bg-blue-700 rounded-xl w-60 h-20 m-2'>Cornflower Blue</button>
       </div>
